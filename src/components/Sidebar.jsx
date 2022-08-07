@@ -34,7 +34,7 @@ export const Sidebar = () => {
           alt="avatar"
         ></Avatar>
         <Typography variant="h5" sx={{ fontStyle: "italic" }}>
-          Rain Wu
+          Siyuan Wu
         </Typography>
         <Stack direction="row" spacing={2}>
           <GitHub />
