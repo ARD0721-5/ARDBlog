@@ -4,11 +4,10 @@ import {
   Box,
   Button,
   IconButton,
-  Link,
   Stack,
   Typography,
 } from "@mui/material";
-import React, { Profiler } from "react";
+import React from "react";
 import avatar_sample from "../test_picture/Avatar.jpg";
 
 let data = {
@@ -21,18 +20,20 @@ let data = {
 };
 
 class Sidebar extends React.Component {
-  state = {
-    login: false,
-  };
+  constructor() {
+    super();
+    this.state = {
+      login: false,
+    };
+  }
 
   handleLinkClick = (url) => {
-    console.log("url is", url);
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   handleLogin = () => {
     this.setState({
-      login: (this.state.login = true),
+      login: true,
     });
     console.log("whether login", this.state.login);
   };
