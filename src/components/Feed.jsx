@@ -1,8 +1,6 @@
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
 import { Post } from "./Post";
-import background_sample from "../test_picture/Background.jpg";
-import avatar_sample from "../test_picture/Avatar.jpg";
 
 export const Feed = () => {
   const data = [

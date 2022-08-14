@@ -1,14 +1,6 @@
 import React from "react";
+import { Favorite, FavoriteBorder, AddComment } from "@mui/icons-material";
 import {
-  MoreVert,
-  Share,
-  Favorite,
-  FavoriteBorder,
-  AddComment,
-} from "@mui/icons-material";
-import {
-  Avatar,
-  Button,
   Card,
   CardActions,
   CardContent,
@@ -18,8 +10,6 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import avatar_sample from "../test_picture/Avatar.jpg";
-import { Box } from "@mui/system";
 
 export const Post = (props) => {
   const subtitle = (
