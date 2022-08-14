@@ -1,7 +1,14 @@
 import React from "react";
-import { MoreVert, Share, Favorite, FavoriteBorder } from "@mui/icons-material";
+import {
+  MoreVert,
+  Share,
+  Favorite,
+  FavoriteBorder,
+  AddComment,
+} from "@mui/icons-material";
 import {
   Avatar,
+  Button,
   Card,
   CardActions,
   CardContent,
@@ -11,35 +18,29 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import avatar_sample from "../test_picture/Avatar.jpg";
+import { Box } from "@mui/system";
 
-export const Post = () => {
+export const Post = (props) => {
+  const subtitle = (
+    <Typography>
+      {props.value.time} <br></br>
+      {props.value.subtitle}
+    </Typography>
+  );
   return (
-    <Card sx={{ margin: 5 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVert />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
+    <Card sx={{ margin: 3, boxShadow: 3 }}>
+      <CardHeader title={props.value.title} subheader={subtitle}></CardHeader>
       <CardMedia
         component="img"
-        height="10%"
-        image="/static/images/cards/paella.jpg"
+        height="500"
+        margin={"auto"}
+        src={require("../test_picture/" + props.value.image + ".jpg")}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {props.value.text}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -47,10 +48,10 @@ export const Post = () => {
           <Checkbox
             icon={<FavoriteBorder />}
             checkedIcon={<Favorite sx={{ color: "red" }} />}
-          />
+          ></Checkbox>
         </IconButton>
-        <IconButton aria-label="share">
-          <Share />
+        <IconButton aria-label="add comment">
+          <AddComment />
         </IconButton>
       </CardActions>
     </Card>

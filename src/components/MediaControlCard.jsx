@@ -15,7 +15,7 @@ export const MediaControlCard = () => {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: "flex", width: 300, height: 150, boxShadow: 3 }}>
+    <Card sx={{ display: "flex", width: 300, height: 150, boxShadow: 3, m: 2 }}>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CardContent sx={{ flex: "1 0 auto" }}>
           <Typography component="div" variant="h7">

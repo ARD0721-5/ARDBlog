@@ -7,7 +7,8 @@ export const Topbar = () => {
     <Card>
       <CardMedia
         component="img"
-        height="255"
+        height="250"
+        margin={"auto"}
         image={background_sample}
         alt="Paella dish"
       />
