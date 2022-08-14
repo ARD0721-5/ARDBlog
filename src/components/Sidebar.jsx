@@ -89,7 +89,7 @@ class Sidebar extends React.Component {
           <Button
             variant="text"
             sx={{ fontStyle: "italic" }}
-            onClick={this.handleLogin}
+            onClick={() => this.handleLogin()}
           >
             Login
           </Button>
